@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management Page</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <h1>Library Management</h1>
+    <div class="navbar">
+      <div>
+        <a class="login" href="login.html">Login</a>
+        <a class="signup" href="signup.html">Sign Up</a>
+      </div>
+      <div>
+        <a class="home" href="#">Home</a>
+        <a class="books" href="#">Books</a>
+        <a class="authors" href="#">Authors</a>
+        <a class="subjects" href="#">Subjects</a>
+      </div>
+    </div>
+    <div>
+      <h2>Filters:</h2>
+      <label for="title">Title:</label>
+      <input type="text" id="title" oninput="applyFilters()" />
+      <label for="author">Author:</label>
+      <input type="text" id="author" oninput="applyFilters()" />
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" oninput="applyFilters()" />
+      <label for="publish-date">Publish Date:</label>
+      <input type="text" id="publish-date" oninput="applyFilters()" />
+    </div>
+
+    <div id="books">
+      <!-- The book list will be dynamically added here -->
+    </div>
+
+    <div id="pagination">
+      <!-- The pagination buttons will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

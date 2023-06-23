@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      background-image: url("https://t3.ftcdn.net/jpg/02/92/90/56/360_F_292905667_yFUJNJPngYeRNlrRL4hApHWxuYyRY4kN.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      background-color: #d4e6f1;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-left:600px;
+    }
+
+    form {
+      width: 300px;
+      margin-left: 850px;
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fade-in 1s ease forwards 1s;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #5dade2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3498db;
+    }
+
+    #username {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    #password {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .logo-container a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      animation: fade-out 1s ease forwards 1s;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fade-out {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function() {
+      var loader = document.querySelector(".loading-overlay");
+      var form = document.querySelector("form");
+
+      setTimeout(function() {
+        loader.style.display = "none";
+        form.style.opacity = "1";
+      }, 1000);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="loading-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <h2>Login</h2>
+
+  <form action="books.html">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required /><br /><br />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <input type="submit" value="Login" />
+    <br></br>
+    <b>________________Or________________</b>
+    <br></br>
+
+    <div class="logo-container">
+      <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-905490546%3A1687433328298987&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Ftab%3Drm%26ogbl&ifkv=Af_xneHil_yVBe-MVZwErl-VwZL6WQ_wCHIUKzsShrnn71xiuArDBwcTcbK1f4Fc3HgIewDujYXfaA&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+        target="_blank">
+        <img src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_36dp.png" alt="Gmail Logo"
+          style="float: center;width: 48px;height: 48px;" />
+      </a>
+
+      <a href="https://www.facebook.com/">
+        <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook Logo"
+          style="float: center;width: 48px;height: 48px;" />
+      </a>
+
+      <a href="https://www.linkedin.com/login">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/145/145807.png?w=740&t=st=1687433727~exp=1687434327~hmac=ba6fdfa82688a5fd02f361543a41f59e163fd79018ae9c65b7b9e08ffa87e93d"
+          alt="LinkedIn Logo" style="float: center;width: 48px;height: 48px;" />
+      </a>
+    </div>
+  </form>
+</body>
+
+</html>

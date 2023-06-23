@@ -1,0 +1,145 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #D4E6F1;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    color: rgb(30, 135, 240);
+  }
+
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  input:focus{
+  outline: 2px solid #5499C7 ;
+  }
+
+  #books {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+
+  #books div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:#A9CCE3;
+    border-radius: 10px;
+
+  }
+
+  #pagination {
+    text-align: center;
+  }
+
+  #pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(30, 135, 240);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #pagination button:hover {
+    background-color: rgb(16, 111, 184);
+  }
+
+  .navbar {
+    background-color: #A9CCE3 ;
+    padding-top:17px;
+    padding-bottom:7px;
+    padding-left:10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar a:hover {
+    background-color: #555;
+  }
+
+  .navbar a.home {
+    background-color:
+#CD6155;
+    border-radius:7px;
+  }
+
+  .navbar a.home:hover {
+    background-color:#922B21;
+  }
+
+  .navbar a.books {
+    background-color: #3498db;
+    border-radius:7px;
+  }
+
+    .navbar a.books:hover {
+    background-color: #21618C;
+  }
+
+  .navbar a.authors {
+    background-color: #8E44AD;
+    border-radius:7px;
+  }
+
+  .navbar a.authors:hover {
+    background-color:#5B2C6F;
+  }
+
+
+  .navbar a.subjects {
+    background-color: #34495E;
+    border-radius:7px;
+  }
+
+  .navbar a.subjects:hover {
+    background-color:#212F3C ;
+  }
+
+
+  .navbar a.login {
+    background-color: #9b59b6;
+    border-radius:7px;
+  }
+
+  .navbar a.login:hover {
+    background-color:#6C3483 ;
+  }
+
+  .navbar a.signup {
+    background-color: #1abc9c;
+    border-radius:7px;
+  }
+
+  .navbar a.signup:hover{
+    background-color: #117864;
+  }
